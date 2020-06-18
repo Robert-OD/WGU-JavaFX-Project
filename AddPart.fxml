@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="471.0" prefWidth="441.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <Label layoutX="33.0" layoutY="14.0" style="-fx-label-padding: 0;" text="Add Part">
+            <font>
+                <Font name="System Bold" size="18.0" />
+            </font>
+        </Label>
+        <RadioButton fx:id="inHouseRadio" layoutX="181.0" layoutY="18.0" mnemonicParsing="false" onMouseClicked="#selectInHouse" text="In House">
+            <font>
+                <Font size="14.0" />
+            </font>
+            <toggleGroup>
+                <ToggleGroup fx:id="addPartToggleGroup" />
+            </toggleGroup>
+        </RadioButton>
+        <RadioButton fx:id="outSourcedRadio" layoutX="280.0" layoutY="18.0" mnemonicParsing="false" onMouseClicked="#selectOutSourced" text="Out Sourced" toggleGroup="$addPartToggleGroup">
+            <padding>
+                <Insets left="20.0" />
+            </padding>
+            <font>
+                <Font size="14.0" />
+            </font>
+        </RadioButton>
+        <TextField fx:id="max" layoutX="154.0" layoutY="287.0" onMouseClicked="#clearTextField" prefHeight="40.0" prefWidth="75.0" />
+        <TextField fx:id="company" layoutX="214.0" layoutY="340.0" onMouseClicked="#clearTextField" prefHeight="40.0" prefWidth="150.0" />
+        <TextField fx:id="min" layoutX="304.0" layoutY="288.0" onMouseClicked="#clearTextField" prefHeight="40.0" prefWidth="75.0" />
+        <Label layoutX="255.0" layoutY="297.0" text="Min">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </Label>
+        <Label layoutX="94.0" layoutY="298.0" text="Max">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </Label>
+        <Label fx:id="companyLabel" layoutX="94.0" layoutY="349.0" text="Company Name">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </Label>
+        <Button fx:id="cancelAddPartButton" layoutX="243.0" layoutY="414.0" mnemonicParsing="false" onMouseClicked="#cancelAddPart" prefHeight="40.0" prefWidth="110.0" text="Cancel">
+         <font>
+            <Font size="14.0" />
+         </font></Button>
+        <Button fx:id="saveButton" layoutX="108.0" layoutY="414.0" mnemonicParsing="false" onMouseClicked="#saveAddPart" prefHeight="40.0" prefWidth="110.0" text="Save">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Button>
+      <VBox layoutX="98.0" layoutY="61.0" prefHeight="207.0" prefWidth="289.0" spacing="10.0">
+         <children>
+            <HBox alignment="CENTER_LEFT" prefHeight="47.0" prefWidth="289.0" spacing="100.0">
+               <children>
+                    <Label text="ID">
+                        <font>
+                            <Font size="15.0" />
+                        </font>
+                    </Label>
+                    <TextField fx:id="id" editable="false" onMouseEntered="#idDisabled" prefHeight="40.0" prefWidth="150.0" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="44.0" prefWidth="289.0" spacing="75.0">
+               <children>
+                    <Label text="Name">
+                        <font>
+                            <Font size="15.0" />
+                        </font>
+                    </Label>
+                    <TextField fx:id="name" onMouseClicked="#clearTextField" prefHeight="40.0" prefWidth="150.0" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="52.0" prefWidth="289.0" spacing="95.0">
+               <children>
+                    <Label text="Inv">
+                        <font>
+                            <Font size="15.0" />
+                        </font>
+                    </Label>
+                    <TextField fx:id="count" onMouseClicked="#clearTextField" prefHeight="40.0" prefWidth="150.0" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="42.0" prefWidth="289.0" spacing="82.0">
+               <children>
+                    <Label text="Price">
+                        <font>
+                            <Font size="15.0" />
+                        </font>
+                    </Label>
+                    <TextField fx:id="price" onMouseClicked="#clearTextField" prefHeight="40.0" prefWidth="150.0" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+    </children>
+</AnchorPane>
